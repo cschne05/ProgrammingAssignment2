@@ -13,12 +13,17 @@ makeCacheMatrix <- function(x = matrix()) {
               n <<- m
       }
       
-      getInverse <- function(z) {
-              if(z == x) {
+      equalMat <<- function(q, r) {
+              is.matrix(q) && is.matrix(r) && dim(q) == dim(r) && all(q == r)
+      }
+      
+      getInverse <<- function(z) {
+              if(equalMat(z, x) == TRUE) {
                       n
               }
               n <<- NULL 
       }
+      
 
 }
 
