@@ -7,7 +7,11 @@ makeCacheMatrix <- function(x = matrix()) {
       n <- NULL
       m <- matrix()
       
-      
+      calcInverse <- function(y) {
+              x <<- y
+              m <<- solve(x)
+              n <<- m
+      }
 
 }
 
